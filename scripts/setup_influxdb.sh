@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Instalação iniciada em `date -Is`" >> /root/status-instalacao.txt 
+echo "Instalação iniciada em `date -Is`" >> /tmp/install.log 
 
 # Adicionando o repositório do grafana:
 echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
@@ -90,7 +90,7 @@ sudo systemctl start grafana-server
 nohup ~/pedidos.sh &
 
 ###########################################################
-echo "Instalação finalizada em `date -Is`" >> /root/status-instalacao.txt
+echo "Instalação finalizada em `date -Is`" >> /tmp/install.log
 
 
 

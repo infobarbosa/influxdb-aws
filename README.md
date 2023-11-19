@@ -27,7 +27,7 @@ INFLUX_PASSWORD=inseguro
 
 ### Verificando a instalação
 ```plain
-tail status-instalacao.txt
+tail -f /tmp/install.log
 ```{{exec}}
 
 O lab estará pronto para uso quando aparecer a **última linha**:

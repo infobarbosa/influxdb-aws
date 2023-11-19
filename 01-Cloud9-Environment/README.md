@@ -99,15 +99,25 @@ Ao ser criado, seu ambiente aparece no console do Cloud9
 16. Clone do git deste laboratório:
 
 ```
-git clone https://github.com/infobarbosa/mariadb-aws.git
+git clone https://github.com/infobarbosa/influxdb-aws.git
 ```
-![img/019_cloud9_clone_git.png](img/019_cloud9_clone_git.png)
+Output:
+```
+voclabs:~/environment $ git clone https://github.com/infobarbosa/influxdb-aws.git
+Cloning into 'influxdb-aws'...
+remote: Enumerating objects: 70, done.
+remote: Counting objects: 100% (70/70), done.
+remote: Compressing objects: 100% (57/57), done.
+remote: Total 70 (delta 10), reused 66 (delta 6), pack-reused 0
+Receiving objects: 100% (70/70), 8.05 MiB | 10.85 MiB/s, done.
+Resolving deltas: 100% (10/10), done.
+```
 
 
 17. Navegue para o diretório raiz do projeto:
 
 ```
-cd mariadb-aws/
+cd influxdb-aws/
 ```
 
 18. Execute o script `setup_cloud9_env.sh` conforme a seguir:

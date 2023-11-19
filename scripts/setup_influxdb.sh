@@ -26,10 +26,11 @@ sudo systemctl start influxdb
 wget https://dl.influxdata.com/influxdb/releases/influxdb2-client-2.7.3-linux-amd64.tar.gz
 
 # Desempacotando:
-tar xvzf influxdb2-client-2.7.3-linux-amd64.tar.gz
+tar xvzf ./influxdb2-client-2.7.3-linux-amd64.tar.gz
 
 # Movendo para `/usr/local/bin`:
-sudo mv influx /usr/local/bin/
+sudo cp ./influx /usr/local/bin/
+
 
 ### Configurando o acesso
 

@@ -2,11 +2,11 @@
 
 echo "Instalação iniciada em `date -Is`" >> /tmp/install.log 
 
-# Adicionando o repositório do grafana:
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
-
 # Atualizando lista de pacotes
 sudo apt update -y
+
+# Adicionando o repositório do grafana:
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 
 ###########################################################
 # Instalação do InfluxDB
@@ -41,7 +41,7 @@ sudo echo 'export INFLUX_HOST=http://localhost:8086' >> ~/.bash_profile
 sudo echo 'export INFLUX_ORG=infobarbosa' >> ~/.bash_profile
 sudo echo 'export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' >> ~/.bash_profile
 sudo echo 'export INFLUX_USER=barbosa' >> ~/.bash_profile
-sudo echo 'export INFLUX_PASSWORD=inseguro' >> ~/.bash_profile
+sudo echo 'export INFLUX_PASSWORD=pessimasenha' >> ~/.bash_profile
 
 source ~/.bash_profile
 

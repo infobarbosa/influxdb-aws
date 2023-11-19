@@ -92,10 +92,5 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 
 ###########################################################
-# Inicializando a produção de data point
-###########################################################
-nohup ./scripts/pedidos.sh &
-
-###########################################################
 echo "Instalação finalizada em `date -Is`" >> /tmp/install.log
 

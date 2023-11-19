@@ -43,7 +43,7 @@ sudo echo 'export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6z
 sudo echo 'export INFLUX_USER=barbosa' >> /home/ubuntu/.bash_profile
 sudo echo 'export INFLUX_PASSWORD=pessimasenha' >> /home/ubuntu/.bash_profile
 
-source /home/ubuntu/.bash_profile
+sudo source /home/ubuntu/.bash_profile
 
 # Executando a configuração inicial:
 sudo influx setup \
@@ -88,7 +88,7 @@ sudo systemctl start grafana-server
 ###########################################################
 # Inicializando a produção de data point
 ###########################################################
-nohup scripts/pedidos.sh &
+nohup sh scripts/pedidos.sh &
 
 ###########################################################
 echo "Instalação finalizada em `date -Is`" >> /tmp/install.log

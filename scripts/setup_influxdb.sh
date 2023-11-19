@@ -35,15 +35,15 @@ sudo cp ./influx /usr/local/bin/
 ### Configurando o acesso
 
 # Setando algumas variáveis de ambiente:
-sudo echo 'export INFLUX_CONFIG_NAME=default' >> ~/.bash_profile
-sudo echo 'export INFLUX_BUCKET_NAME=default' >> ~/.bash_profile
-sudo echo 'export INFLUX_HOST=http://localhost:8086' >> ~/.bash_profile
-sudo echo 'export INFLUX_ORG=infobarbosa' >> ~/.bash_profile
-sudo echo 'export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' >> ~/.bash_profile
-sudo echo 'export INFLUX_USER=barbosa' >> ~/.bash_profile
-sudo echo 'export INFLUX_PASSWORD=pessimasenha' >> ~/.bash_profile
+sudo echo 'export INFLUX_CONFIG_NAME=default' >> /home/ubuntu/.bash_profile
+sudo echo 'export INFLUX_BUCKET_NAME=default' >> /home/ubuntu/.bash_profile
+sudo echo 'export INFLUX_HOST=http://localhost:8086' >> /home/ubuntu/.bash_profile
+sudo echo 'export INFLUX_ORG=infobarbosa' >> /home/ubuntu/.bash_profile
+sudo echo 'export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' >> /home/ubuntu/.bash_profile
+sudo echo 'export INFLUX_USER=barbosa' >> /home/ubuntu/.bash_profile
+sudo echo 'export INFLUX_PASSWORD=pessimasenha' >> /home/ubuntu/.bash_profile
 
-source ~/.bash_profile
+source /home/ubuntu/.bash_profile
 
 # Executando a configuração inicial:
 sudo influx setup \
@@ -92,8 +92,4 @@ nohup ~/pedidos.sh &
 
 ###########################################################
 echo "Instalação finalizada em `date -Is`" >> /tmp/install.log
-
-
-
-
 

@@ -35,18 +35,18 @@ sudo cp ./influx /usr/local/bin/
 ### Configurando o acesso
 
 # Setando algumas variáveis de ambiente:
-sudo echo 'export INFLUX_CONFIG_NAME=default' >> /etc/profile
-sudo echo 'export INFLUX_BUCKET_NAME=default' >> /etc/profile
-sudo echo 'export INFLUX_HOST=http://localhost:8086' >> /etc/profile
-sudo echo 'export INFLUX_ORG=infobarbosa' >> /etc/profile
-sudo echo 'export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' >> /etc/profile
-sudo echo 'export INFLUX_USER=barbosa' >> /etc/profile
-sudo echo 'export INFLUX_PASSWORD=inseguro' >> /etc/profile
+sudo echo 'export INFLUX_CONFIG_NAME=default' >> ~/.bash_profile
+sudo echo 'export INFLUX_BUCKET_NAME=default' >> ~/.bash_profile
+sudo echo 'export INFLUX_HOST=http://localhost:8086' >> ~/.bash_profile
+sudo echo 'export INFLUX_ORG=infobarbosa' >> ~/.bash_profile
+sudo echo 'export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' >> ~/.bash_profile
+sudo echo 'export INFLUX_USER=barbosa' >> ~/.bash_profile
+sudo echo 'export INFLUX_PASSWORD=inseguro' >> ~/.bash_profile
 
-source /etc/profile
+source ~/.bash_profile
 
 # Executando a configuração inicial:
-influx setup \
+sudo influx setup \
   --username ${INFLUX_USER} \
   --password ${INFLUX_PASSWORD} \
   --token ${INFLUX_TOKEN} \

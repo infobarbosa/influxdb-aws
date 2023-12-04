@@ -3,6 +3,18 @@
 `influx write` escreve data points no InfluxDB via entrada padrão (console) ou a partir de um arquivo de dados.
 <br>
 
+### Pré-requisito
+Executar os comandos abaixo (setup de variáveis de ambiente)
+```
+export INFLUX_CONFIG_NAME=default
+export INFLUX_BUCKET_NAME=default
+export INFLUX_HOST=http://localhost:8086
+export INFLUX_ORG=infobarbosa
+export INFLUX_TOKEN=3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==
+export INFLUX_USER=barbosa
+export INFLUX_PASSWORD=pessimasenha
+```
+
 ### Sintaxe
 
 ```

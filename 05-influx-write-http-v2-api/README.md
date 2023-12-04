@@ -21,14 +21,14 @@ curl --request POST \
 
 **Utilizando XPOST**
 ```
-curl -i -XPOST 'http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns' \
+curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns" \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --data-raw 'pedidos,produto=SANDUICHEIRA Quantity=1,UnitPrice=2000'
 ```
 
 **Parâmetro header "Content-Type"**
 ```
-curl -i -XPOST 'http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns' \
+curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns" \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --header "Content-Type: text/plain; charset=utf-8" \
   --data-raw 'pedidos,produto=LAVADOURA Quantity=1,UnitPrice=6000'
@@ -36,7 +36,7 @@ curl -i -XPOST 'http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=defa
 
 **Parâmetro header "Accept"**
 ```
-curl -i -XPOST 'http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns' \
+curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns" \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --header "Content-Type: text/plain; charset=utf-8" \
   --header "Accept: application/json" \

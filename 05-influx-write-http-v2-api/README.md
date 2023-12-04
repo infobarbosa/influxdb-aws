@@ -10,35 +10,35 @@ Para mais informações acesse https://docs.influxdata.com/influxdb/v2.5/write-d
 Atenção! Para fins didáticos estamos omitindo o timestamp.
 
 **Utilizando POST**
-```plain
+```
 curl --request POST \
 "http://ubuntu:8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns" \
   --header "Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==" \
   --header "Content-Type: text/plain; charset=utf-8" \
   --header "Accept: application/json" \
   --data-binary 'pedidos,produto=COMPUTADOR Quantity=1,UnitPrice=2000 1668387574000000000'
-```{{exec}}
+```
 
 **Utilizando XPOST**
-```plain
+```
 curl -i -XPOST 'http://ubuntu:8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns' \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --data-raw 'pedidos,produto=SANDUICHEIRA Quantity=1,UnitPrice=2000'
-```{{exec}}
+```
 
 **Parâmetro header "Content-Type"**
-```plain
+```
 curl -i -XPOST 'http://ubuntu:8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns' \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --header "Content-Type: text/plain; charset=utf-8" \
   --data-raw 'pedidos,produto=LAVADOURA Quantity=1,UnitPrice=6000'
-```{{exec}}
+```
 
 **Parâmetro header "Accept"**
-```plain
+```
 curl -i -XPOST 'http://ubuntu:8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns' \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --header "Content-Type: text/plain; charset=utf-8" \
   --header "Accept: application/json" \
   --data-raw 'pedidos,produto=ASPIRADOR Quantity=5,UnitPrice=600'
-```{{exec}}
+```

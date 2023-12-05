@@ -12,7 +12,7 @@ Vamos configurar um dashboard simples no Grafana com o InfluxDB como fonte de da
 - Clique no label `select measurement` e escolha `pedidos`
 - No label WHERE clique no sinal ` + ` e escolha `produto::tag`
 - Clique em `select tag value` e escolha `CELULAR`
-- No label SELECT clique em `field(value)` e escolha `quantity`
+- No label SELECT clique em `field(value)` e escolha `quantidade`
 - Clique em `mean()` e então em `remove` para remover essa função agregadora
 - Clique no ` + `, escolha `Aggregations` e então escolha a função `sum()`
 - No label GROUP BY clique em `time($__interval)` e então em `remove` para removê-lo
@@ -20,7 +20,7 @@ Vamos configurar um dashboard simples no Grafana com o InfluxDB como fonte de da
 - Se você clicar no ícone de lápis à direita, verá a seguinte query:
 
 ```
-SELECT "Quantity" FROM "pedidos" WHERE ("produto"::tag = 'CELULAR') AND $timeFilter GROUP BY "pais"::tag
+SELECT "quantidade" FROM "pedidos" WHERE ("produto"::tag = 'CELULAR') AND $timeFilter GROUP BY "pais"::tag
 ```
 
 - Clique em "Run query"

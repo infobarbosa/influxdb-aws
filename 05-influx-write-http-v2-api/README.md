@@ -16,14 +16,14 @@ curl --request POST \
   --header "Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==" \
   --header "Content-Type: text/plain; charset=utf-8" \
   --header "Accept: application/json" \
-  --data-binary 'pedidos,produto=COMPUTADOR Quantity=1,UnitPrice=2000 1668387574000000000'
+  --data-binary 'pedidos,produto=COMPUTADOR quantidade=1,preco=2000 1668387574000000000'
 ```
 
 **Utilizando XPOST**
 ```
 curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns" \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
-  --data-raw 'pedidos,produto=SANDUICHEIRA Quantity=1,UnitPrice=2000'
+  --data-raw 'pedidos,produto=SANDUICHEIRA quantidade=1,preco=2000'
 ```
 
 **Parâmetro header "Content-Type"**
@@ -31,7 +31,7 @@ curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=defa
 curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=default&precision=ns" \
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --header "Content-Type: text/plain; charset=utf-8" \
-  --data-raw 'pedidos,produto=LAVADOURA Quantity=1,UnitPrice=6000'
+  --data-raw 'pedidos,produto=LAVADOURA quantidade=1,preco=6000'
 ```
 
 **Parâmetro header "Accept"**
@@ -40,5 +40,5 @@ curl -i -XPOST "http://$(hostname):8086/api/v2/write?org=infobarbosa&bucket=defa
   --header 'Authorization: Token 3y1c3NnlmA1kA061YlROSO0gE5a1ppH_1Ig5HSMCsCX3VKF6zkrBwAtC-Hr6c_TTU8B9kwYOPphDq6hwyw5tLw==' \
   --header "Content-Type: text/plain; charset=utf-8" \
   --header "Accept: application/json" \
-  --data-raw 'pedidos,produto=ASPIRADOR Quantity=5,UnitPrice=600'
+  --data-raw 'pedidos,produto=ASPIRADOR quantidade=5,preco=600'
 ```

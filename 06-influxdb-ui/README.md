@@ -13,7 +13,7 @@ Vamos acessar a interface web do InfluxDB.
 - No canto superior à direita ative a chave seletora "Switch do old data explorer."
 - Em "From" escolha o bucket "default"
 - Em "Filter" escolha a measurement "pedidos"
-- No novo "Filter" que se abrir escolha "Quantity"
+- No novo "Filter" que se abrir escolha "quantidade"
 - Escolha o intervalo de 1 minuto ou 5 minutos para visualização
 - Clique em "Submit"
 
@@ -25,7 +25,7 @@ Vamos acessar a interface web do InfluxDB.
 from(bucket: "default")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r["_measurement"] == "pedidos")
-  |> filter(fn: (r) => r["_field"] == "Quantity")
+  |> filter(fn: (r) => r["_field"] == "quantidade")
   |> group(columns: ["produto"])
   |> aggregateWindow(every: v.windowPeriod, fn: sum, createEmpty: false)
   |> yield(name: "sum")

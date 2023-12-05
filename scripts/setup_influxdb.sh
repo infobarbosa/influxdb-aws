@@ -83,7 +83,7 @@ sudo apt update -y
 sudo apt -y install grafana
 
 # Incluindo arquivo de configuração de datasource InfluxDB
-sudo mv assets/influxdb-grafana-datasource.yaml /etc/grafana/provisioning/datasources/influxdb.yaml
+sudo mv ./assets/influxdb-grafana-datasource.yaml /etc/grafana/provisioning/datasources/influxdb.yaml
 
 # Ativando o serviço
 sudo systemctl enable grafana-server

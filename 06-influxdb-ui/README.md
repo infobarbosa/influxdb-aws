@@ -3,9 +3,10 @@
 Vamos acessar a interface web do InfluxDB.
 
 ### Acessando a InfluxDB UI
-- Acesse o menu "Traffic / Ports"
-- Em "Custom Ports" informe 8086 e clique em Access.
-- Na tela do InfluxDB UI informe o usuário `barbosa` e senha `inseguro`.
+- No console do EC2 acesse o security group (grupo de segurança) e adicione uma regra de entrada (ingress) especificando a porta 8086 (porta do InfluxDB) aberta para 0.0.0.0/0.
+- Obtenha o DNS Público da instância EC2.
+- Em uma nova janela do browser informe o DNS Público com a porta 8086. 
+- Na tela do InfluxDB UI informe o usuário `barbosa` e senha `pessimasenha`.
 
 ### Solução 1
 - No menu Buckets busque por "default"

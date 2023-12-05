@@ -3,18 +3,23 @@
 Hora de escrever os dados no InfluxDB.
 
 Verifique o arquivo `invoices.csv` disponível no servidor.
+### Listar o arquivo
 ```
-ls -latrh invoices.csv
-
-wc -l invoices.csv
+ls -latrh ./data/invoices.csv
 ```
 
-Analise as informações disponíveis no mesmo
+### Contagem de linhas
 ```
-head -50 invoices.csv
+wc -l ./data/invoices.csv
+```
 
+### Analise as informações disponíveis no mesmo
+```
+head -50 ./data/invoices.csv
+```
 
-tail -50 invoices.csv
+```
+tail -50 ./data/invoices.csv
 ```
 
 ### Sintaxe

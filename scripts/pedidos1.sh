@@ -11,9 +11,9 @@ export INFLUX_PASSWORD=pessimasenha
 produtos=("TV" "GELADEIRA" "TV" "HOMETHEATER" "COMPUTADOR" "MONITOR" "TABLET" "SOUNDBAR" "CELULAR" "NOTEBOOK")
 for i in `seq 1000000`
 do
-    influx write --bucket default "pedidos,produto=${produtos[${RANDOM:0:1}]},pais=BR Quantity=``${RANDOM:0:1}`` `date +%s%N`"
-    influx write --bucket default "pedidos,produto=${produtos[${RANDOM:0:1}]},pais=US Quantity=``${RANDOM:0:1}`` `date +%s%N`"
-    influx write --bucket default "pedidos,produto=${produtos[${RANDOM:0:1}]},pais=UK Quantity=``${RANDOM:0:1}`` `date +%s%N`"
+    influx write --bucket default "pedidos,produto=${produtos[${RANDOM:0:1}]},pais=BR quantidade=``${RANDOM:0:1}`` `date +%s%N`"
+    influx write --bucket default "pedidos,produto=${produtos[${RANDOM:0:1}]},pais=US quantidade=``${RANDOM:0:1}`` `date +%s%N`"
+    influx write --bucket default "pedidos,produto=${produtos[${RANDOM:0:1}]},pais=UK quantidade=``${RANDOM:0:1}`` `date +%s%N`"
 
     sleep 0.5
 done

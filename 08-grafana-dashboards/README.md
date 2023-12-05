@@ -7,16 +7,20 @@ Vamos configurar um dashboard simples no Grafana com o InfluxDB como fonte de da
 - Obtenha o DNS Público da instância EC2.
 - Em uma nova janela do browser informe o DNS Público com a porta 3000. 
 - No Gravana busque o menu "Explore"
-- No campo editável informe a query Flux a seguir:
+- No combo ao lado do menu "Outline" escolha `InfluxDB_v2_InfluxQL`
+- No label FROM informe: default
+- Clique no label `select measurement` e escolha `pedidos`
+- No label WHERE clique no sinal ` + ` e escolha `produto::tag`
+- Clique em `select tag value` e escolha `CELULAR`
+- No label SELECT clique em `field(value)` e escolha `quantity`
+- Clique em `mean()` e então em `remove` para remover essa função agregadora
+- Clique no ` + `, escolha `Aggregations` e então escolha a função `sum()`
+- No label GROUP BY clique em `time($__interval)` e então em `remove` para removê-lo
+- Clique no ` + ` e então `tag(pais::tag)`
+- Se você clicar no ícone de lápis à direita, verá a seguinte query:
 
 ```
-from(bucket: "default")
-  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
-  |> filter(fn: (r) => r["_measurement"] == "pedidos")
-  |> filter(fn: (r) => r["_field"] == "Quantity")
-  |> group(columns: ["produto"])
-  |> aggregateWindow(every: v.windowPeriod, fn: sum, createEmpty: false)
-  |> yield(name: "sum")
+SELECT "Quantity" FROM "pedidos" WHERE ("produto"::tag = 'CELULAR') AND $timeFilter GROUP BY "pais"::tag
 ```
 
 - Clique em "Run query"

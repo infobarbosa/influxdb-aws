@@ -20,7 +20,7 @@ tail -50 invoices.csv
 ### Sintaxe
 ```plain
 influx write -b default \
-  -f invoices.csv \
+  -f ./data/invoices.csv \
   --header "#constant measurement,invoices" \
   --header "#datatype dateTime,tag,tag,tag,tag,tag,double,double"
 

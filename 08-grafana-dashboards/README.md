@@ -3,10 +3,12 @@
 Vamos configurar um dashboard simples no Grafana com o InfluxDB como fonte de dados.
 
 ### Solução
-- Acesse o menu "Traffic / Ports"
-- Em "Custom Ports" informe 3000 (porta padrão do Grafana) e clique em Access
+- No console do EC2 acesse o security group (grupo de segurança) e adicione uma regra de entrada (ingress) especificando a porta 3000 (porta do Grafana) aberta para 0.0.0.0/0.
+- Obtenha o DNS Público da instância EC2.
+- Em uma nova janela do browser informe o DNS Público com a porta 3000. 
 - No Gravana busque o menu "Explore"
 - No campo editável informe a query Flux a seguir:
+
 ```
 from(bucket: "default")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
@@ -16,6 +18,7 @@ from(bucket: "default")
   |> aggregateWindow(every: v.windowPeriod, fn: sum, createEmpty: false)
   |> yield(name: "sum")
 ```
+
 - Clique em "Run query"
 - Escolha o período "Last 5 minutes"
 - Clique em "Add to dashboard"

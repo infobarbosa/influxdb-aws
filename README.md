@@ -35,3 +35,4 @@ O lab estará pronto para uso quando aparecer a **última linha**:
 Instalação iniciada em 2023-08-06T14:21:57+00:00
 Instalação finalizada em 2023-08-06T14:22:27+00:00
 ```
+

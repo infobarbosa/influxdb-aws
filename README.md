@@ -1,5 +1,8 @@
 # Introdução ao InfluxDB
 
+> ⚠️ **Repositório arquivado (novembro/2026).** Este laboratório usa InfluxDB 2.7 e AWS Cloud9, que não está mais disponível para novas contas AWS.<br>
+> A versão atual do laboratório, com **InfluxDB 3**, está em **[infobarbosa/influxdb-timeseries-demo](https://github.com/infobarbosa/influxdb-timeseries-demo)**.
+
 Author: Prof. Barbosa<br>
 Contact: infobarbosa@gmail.com<br>
 Github: [infobarbosa](https://github.com/infobarbosa)
